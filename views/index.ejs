@@ -6,32 +6,32 @@
 	<div class="ui top attached segment">
 		<div class="ui divided items">
 			<% blogs.forEach(function(blog){ %>
-				<div class="item">
-					<div class="image">
-						<img src="<%= blog.image %>"></img>
+			<div class="item">
+				<div class="image">
+					<img src="<%= blog.image %>"></img>
+				</div>
+				<div class="content">
+					<a class="header" href="/blogs/<%= blog._id %>">
+						<%= blog.title%>
+					</a>
+					<div class="meta">
+						<span>
+							<%= blog.created.toDateString() %>
+						</span>
 					</div>
-					<div class="content">
-						<a class="header" href="/blogs/<%= blog._id %>">
-							<%= blog.title%>
+					<div class="description">
+						<p>
+							<%- blog.body.substring(0,125) %>...</p>
+					</div>
+					<div class="extra">
+						<a href="/blogs/<%= blog._id %>" class="ui teal basic right labeled icon button">
+						<i class="right arrow icon"></i>
+						Read More
 						</a>
-						<div class="meta">
-							<span>
-								<%= blog.created.toDateString() %>
-							</span>
-						</div>
-						<div class="description">
-							<p>
-								<%- blog.body.substring(0,125) %>...</p>
-						</div>
-						<div class="extra">
-							<a href="/blogs/<%= blog._id %>" class="ui teal basic right labeled icon button">
-							<i class="right arrow icon"></i>
-							Read More
-							</a>
-						</div>
 					</div>
 				</div>
-				<% }) %>
+			</div>
+			<% }) %>
 		</div>
 	</div>
 </div>
