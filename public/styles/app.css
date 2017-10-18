@@ -1,0 +1,10 @@
+.ui.menu .item>i.icon{
+	font-size: 2rem;
+}
+.ui.menu.attached{
+	margin-bottom: 2em;
+}
+
+#delete{
+	display: inline;
+}
