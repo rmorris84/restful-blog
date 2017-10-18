@@ -4,15 +4,16 @@
 		<%= blog.title %>
 	</div>
 	<div class="ui top attached">
+		<div class="ui divider"></div>
 		<img src="<%= blog.image %>" class="ui centered rounded image">
+		<div class="ui divider"></div>
 		<div class="content">
-			<span>
-				<p><%= blog.created.toDateString() %></p>
-			</span>
+			<p><strong><%= blog.created.toDateString() %></strong></p>
 		</div>
 		<div class="description">
 			<p><%- blog.body %></p>
 		</div>
+		<div class="ui divider"></div>
 		<form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
 			<div class="ui buttons">
 				<a href="/blogs/<%= blog._id %>/edit" class="ui button">Edit</a>
